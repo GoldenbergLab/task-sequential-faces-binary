@@ -12,8 +12,8 @@
     <script src="jspsych-6.0.5/plugins/jspsych-image-slider-response_noButton.js"></script>
     <script src="jspsych-6.0.5/plugins/jspsych-image-keyboard-response.js"></script>
     <script src="jspsych-6.0.5/plugins/jspsych-external-html.js"></script>
-    <script src="functions_binary_one_face_negative.js"></script>
-    <script src="instructions_binary_one_face_negative.js"></script>
+    <script src="functions_binary_sequence_negative.js"></script>
+    <script src="instructions_binary_sequence_negative.js"></script>
     <script src="jspsych-6.0.5/plugins/jspsych-vsl-grid-scene1.js"></script>
     <script src="jquery-3.3.1.min.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.713.0.min.js"></script>
@@ -51,7 +51,7 @@
 
   var consent = {
     type:'external-html',
-    url: "external_page_binary_one_face_negative.html",
+    url: "external_page_binary_sequence_negative.html",
     cont_btn: "start",
     check_fn: check_consent
   };
@@ -166,13 +166,13 @@
 
   /* create face average task definition array */
   var collective_emotion_estimation = []
-  collective_emotion_estimation.push(consent);
+  //collective_emotion_estimation.push(consent);
   collective_emotion_estimation.push(checkPhone, imageDescription, participant_id); //display instructions
   collective_emotion_estimation.push(instruction_seq1, instruction_seq2, instruction_seq3, instruction_seq4, instruction_seq5);
 
   collective_emotion_estimation.push(fixationGetFace,attentionCheck);//attention check before practice task
   for (var i = 0; i < practiceNumber; i++) {   //practice trials
-    faceNumber =  1;
+    faceNumber =  getRandomInt(1,12);
     for (var t = 0; t < faceNumber; t++) {
       collective_emotion_estimation.push(fixation,face);}
     collective_emotion_estimation.push(response); //response is main slide for amplification result, while memory is ending each trail and contains all information about memory task
@@ -181,14 +181,14 @@
   for (var i = 0; i < taskNumber/attentionCheckInterval; i++) {
     collective_emotion_estimation.push(fixation,attentionCheck); //attention check before real task
 
-      faceNumber = 1 //trial out of attention check loop
+      faceNumber = getRandomInt(1,12); //trial out of attention check loop
       collective_emotion_estimation.push(fixationGetFace);
       for (var t = 0; t < faceNumber; t++) {
       collective_emotion_estimation.push(fixation,face);}
       collective_emotion_estimation.push(response);
     var k = 0;
     while (k < (attentionCheckInterval-1)){
-      faceNumber = 1;
+      faceNumber = getRandomInt(1,12);;
       collective_emotion_estimation.push(fixationGetFace);
       for (var t = 0; t < faceNumber; t++) {//one trial (different numbers of faces with one reponse)
       collective_emotion_estimation.push(fixation,face);}
@@ -212,7 +212,7 @@
     //saveData("2019_categorization_task_pilot_negative_stanford_preload_pictures/" + Face.ID+ ".json",
     //jsPsych.data.get().json(), final_submit, final_submit);
     //jsPsych.data.get().localSave('csv',Face.ID+'.csv'); //save as csv file with id as file name
-    window.location = "https://hbs.qualtrics.com/jfe/form/SV_80mWeruShW64f2e" //https://hbs.qualtrics.com/jfe/form/SV_b2xgA1c7438xJM9 - ampBinary
+    window.location = "https://hbs.qualtrics.com/jfe/form/SV_1IeT76FgZ2s0mVw"
     }
   })
 

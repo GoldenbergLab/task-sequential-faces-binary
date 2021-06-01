@@ -22,8 +22,8 @@ instruction_general = instruction_general.concat(instruction_welcome_page);
 var  instruction_seq1 = {
   type: "html-button-response",
   choices: ['Continue'],
-  stimulus:  "<p align='left'> The goal of this study is to examine <strong> your subjective judgment </strong> of whether you perceive someone as <strong> emotional or NOT emotional </strong> based on a picture.  </p>"+
-   "<p align='left'> In each trial, a face expressing some degree of emotion will appear on the screen. </p>"+
+  stimulus:  "<p align='left'> The goal of this study is to examine <strong> your subjective judgment </strong> of whether you perceive someone as <strong> emotional or NOT emotional </strong> based on a series of pictures.  </p>"+
+   "<p align='left'> In each trial, a series of pictures showing a face expressing some degree of emotion will appear on the screen. </p>"+
    "<img src = img/C125.jpg></img>"+
    "<p align='left'> The face will appear on the screen for a brief moment. In order to process the information portrayed by the face, try to focus your attention on it as much as possible. </p>",
    on_load: textbox
@@ -32,7 +32,7 @@ var  instruction_seq1 = {
 var  instruction_seq2 = {
   type: "html-button-response",
   choices: ['Continue'],
-  stimulus:  "<p align='left'> After seeing the face, you will be asked to judge whether the person in the picture was <strong> emotional </strong> or <strong> not emotional </strong>.</p>"+
+  stimulus:  "<p align='left'> After seeing the series of pictures, you will be asked to judge whether the person in the pictures was <strong> emotional </strong> or <strong> not emotional </strong>.</p>"+
   '<div id="introPics" style="float: center; height: 50px; width: 500px"><button class="jspsych-btn-intro" style="float: left;">emotional</button><button class="jspsych-btn-intro" style="float: right;">NOT emotional</button></div></div>'+
   "<p align='left'> To answer the question you will be required to press either the 'emotional' button if you evaluated the person as emotional or the 'not emotional' button if you evaluated the person as non-emotional. </p>",
    on_load: textbox
@@ -66,7 +66,7 @@ var  instruction_seq_MainTaskTransition = {
   choices: ['Continue'],
   stimulus:  "<p align='left'> Thank you for completing the practice stage. </p>"+
   "<p align='left'> Remember, your task is to give <strong> your judgment </strong> about whether you perceive the person in the picture as <strong> emotional </strong> or <strong> NOT emotional</strong>.</p>"+
-  "<p align='left'> In the following section you will complete the actual session, which consists of 50 trials. This part of the study should take 5 minutes, more or less. </p>" +
+  "<p align='left'> In the following section you will complete the actual session, which consists of 50 trials. This part of the study should take 15 minutes, more or less. </p>" +
   "<p align='left'> Click <strong>Continue</strong> to begin the actual task. </p>",
   on_load: textbox
 };

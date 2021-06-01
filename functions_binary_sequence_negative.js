@@ -103,10 +103,10 @@ function checkPhone (){
     var text = JSON.parse(inputText).Q0;
     if (Face.word !== text){
       falseAnswer += 1;
-      alert("Attention! Please type the word correctly. If the alert shows up for 4 times, the experiment will be automatically terminated.");
+      alert("Attention! Please type the word correctly. If the alert shows up 4 times, the experiment will be automatically terminated.");
       Face.wordList.unshift(Face.word);
       if (falseAnswer == falseAllowance){ //if participant gets alert this number of times
-        alert("Hi! You've made too much errors in typing the word suggesting that you are not paying attention to the task. The task will be Terminated");
+        alert("Hi! You've made too much errors in typing the word suggesting that you are not paying attention to the task. The task will be terminated");
         window.close();
       }else{return true;} }
     else {falseAnswer = 0; return false} //reset falseAnswer
