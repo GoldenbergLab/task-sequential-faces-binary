@@ -19,12 +19,17 @@ var instruction_welcome_page = {
 var instruction_general = [];
 instruction_general = instruction_general.concat(instruction_welcome_page);
 
+function getRandomElement (list){
+  return list[Math.floor(Math.random()*list.length)];
+}
+var img_face = getRandomElement(["<img src = img/A75.jpg></img>","<img src = img/E75.jpg></img>"])
+
 var  instruction_seq1 = {
   type: "html-button-response",
   choices: ['Continue'],
   stimulus:  "<p align='left'> The goal of this study is to examine <strong> your subjective judgment </strong> of whether you perceive someone as <strong> emotional or NOT emotional </strong> based on a picture.  </p>"+
    "<p align='left'> In each trial, a face expressing some degree of emotion will appear on the screen. The face may either be expressing positive or negative emotions. </p>"+
-   "<img src = img/A75.jpg></img>"+
+   img_face+
    "<p align='left'> The face will appear on the screen for a brief moment. In order to process the information portrayed by the face, try to focus your attention on it as much as possible. </p>",
    on_load: textbox
 };
