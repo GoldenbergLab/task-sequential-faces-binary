@@ -37,9 +37,9 @@ var  instruction_seq1 = {
 var  instruction_seq2 = {
   type: "html-button-response",
   choices: ['Continue'],
-  stimulus:  "<p align='left'> After seeing the face, you will be asked to judge whether the person in the picture was <strong> emotional </strong> or <strong> not emotional </strong>.</p>"+
+  stimulus:  "<p align='left'> After seeing the face, you will be asked to judge whether the person in the picture was <strong> emotional </strong> or <strong> not emotional.</strong></p>"+
   '<div id="introPics" style="float: center; height: 50px; width: 500px"><button class="jspsych-btn-intro" style="float: left;">emotional</button><button class="jspsych-btn-intro" style="float: right;">NOT emotional</button></div></div>'+
-  "<p align='left'> To answer the question you will be required to press either the 'emotional' button if you evaluated the person as emotional or the 'not emotional' button if you evaluated the person as non-emotional. </p>",
+  "<p align='left'> To answer the question you will be required to press either the <strong>emotional </strong>button if you evaluated the person as emotional or the <strong>not emotional</strong> button if you evaluated the person as non-emotional. </p>",
    on_load: textbox
 };
 
