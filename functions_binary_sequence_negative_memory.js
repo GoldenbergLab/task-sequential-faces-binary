@@ -98,13 +98,12 @@ function checkPhone (){
 
   function getFaceSample (){  //get the sample of faces in each trial
     Face.singleFace = getRandomInt(1, 50);
-    return ('img/'+ Face.personX +(Face.emotionX + Face.singleFace)+'.jpg');
+    Face.image = ('img/'+ Face.personX +(Face.emotionX + Face.singleFace)+'.jpg')
+    return Face.image;
   }
 
   function memoryFace(){ //Select face for memory task
     var correctFace = getRandomElement(Face.facePool); //selects a random picture of the ones that have been shown in the trial
-    correctFace = correctFace.substr(4); // we need to remove the image/ directory prefix to get into another folder
-    correctFace = ('img/' + correctFace);
     var wrongFace = ImageToNumber(Face.facePool); //Before we can get a false picture, we need to transform picture array into number array (which starts from lowest number)
     wrongFace = falseFace(wrongFace); // getting a false picture. That is located between the real pictures that had the biggest distance to each other.
     var leftPicture = []; //
@@ -123,8 +122,6 @@ function checkPhone (){
 
   function memoryFace1(){ //Select face for memory task
     var correctFace = getRandomElement(Face.facePool); //selects a random picture of the ones that have been shown in the trial
-    correctFace = correctFace.substr(4); // we need to remove the image/ directory prefix to get into another folder
-    correctFace = ('img/' + correctFace);
     var wrongFace = ImageToNumber(Face.facePool); //Before we can get a false picture, we need to transform picture array into number array (which starts from lowest number)
     wrongFace = falseFace(wrongFace); // getting a false picture. That is located between the real pictures that had the biggest distance to each other.
     var leftPicture = []; //
@@ -137,7 +134,7 @@ function checkPhone (){
       leftPicture = wrongFace;
       rightPicture = correctFace;
     }
-    var stimulus_iamages = "<p> Decide which of the target faces had the <strong> same expression </strong> as one in the sequence </p>" + "<div style='height: 200px; width: 700px'>" + "<div style='float: left;'><img src=" + "'" + leftPicture + "'" +  "></img>" + "</div>" + "<div style='float: right;'><img src=" + "'" + rightPicture + "'" + "></img>" + "</div>"; //if you want to change the left pictures position go to jspsych css and change #myDiv to change right position picture change widht of first div
+    var stimulus_iamages = "<p> Indicate which of the target faces had the <strong> same expression </strong> as one in the sequence </p>" + "<div style='height: 200px; width: 700px'>" + "<div style='float: left;'><img src=" + "'" + leftPicture + "'" +  "></img>" + "</div>" + "<div style='float: right;'><img src=" + "'" + rightPicture + "'" + "></img>" + "</div>"; //if you want to change the left pictures position go to jspsych css and change #myDiv to change right position picture change widht of first div
     return stimulus_iamages;
   }
 
@@ -241,4 +238,11 @@ function indexOfMax(arr) { //This function finds the index of the value in an ar
          console.log("Data: ", data);
        }
      });
+   }
+   // For randomizing order //
+   function shuffle() {
+     var a = [];
+     var order = [];
+     order = getRandomElement([1, 2]);
+     return order;
    }

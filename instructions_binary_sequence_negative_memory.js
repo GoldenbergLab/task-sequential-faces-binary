@@ -85,7 +85,7 @@ var  instruction_mem2 = {
   type: "html-button-response",
   choices: ['Continue'],
   stimulus: "<p align='left'> As in the previous session, a series of faces expressing various degrees of emotions will appear on the screen. </p>"+
-   "<img src = img/A75.jpg></img>"+
+   "<img src = img/B101.jpg></img>"+
    "<p align='left'> <b>The goal of this session is to examine whether people can remember the emotional facial expressions of the faces in the sequence.</b> </p>",
    on_load: textbox
 };
@@ -93,10 +93,10 @@ var  instruction_mem2 = {
 var  instruction_mem3 = {
   type: "html-button-response",
   choices: ['Continue'],
-  stimulus:  "<p align='left'> After the sequence of faces you observed, two faces will be presented to you. One of the faces <strong> APPEARED </strong> in the sequence and the other one <strong> DID NOT APPEAR </strong>. <strong>Recall</strong><b> which of the two faces was the one that appeared in the sequence.</b>  </p>"+
+  stimulus:  "<p align='left'> After the sequence of faces you observed, two faces will be presented to you. One of the faces <strong> APPEARED </strong> in the sequence and the other one <strong> DID NOT APPEAR</strong>. <strong>Recall</strong><b> which of the two faces was the one that appeared in the sequence.</b>  </p>"+
    "<div id='introPics' style='height: 200px; width: 550px'>" + "<div style='float: left;'><img src= 'img/B101.jpg'></img>" + "</div>" + "<div style='float: right;'><img src='img/B120.jpg'></img>" + "</div>" + "</div>" +
    '<div id="introPics" style="float: center; height: 50px; width: 500px"><button class="jspsych-btn-intro" style="float: left;">left picture</button><button class="jspsych-btn-intro" style="float: right;">right picture</button></div></div>' +
-   "<p> Your task is to click on the botton below the face that you think was in the sequence.</p>" +
+   "<p> Your task is to click on the button below the face that you think was in the sequence.</p>" +
    "<p> Once you make the choice and click continue, the page will switch to the next trial. </p>",
    on_load: textbox
 };
