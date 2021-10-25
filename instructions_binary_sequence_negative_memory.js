@@ -66,7 +66,7 @@ var  instruction_seq_MainTaskTransition = {
   choices: ['Continue'],
   stimulus:  "<p align='left'> Thank you for completing the practice stage. </p>"+
   "<p align='left'> Remember, your task is to give <strong> your judgment </strong> about whether you perceive the person in the picture as <strong> emotional </strong> or <strong> NOT emotional</strong>.</p>"+
-  "<p align='left'> In the following section you will complete the actual session, which consists of 50 trials. This part of the study should take 15 minutes, more or less. </p>" +
+  "<p align='left'> In the following section you will complete the actual session, which consists of 25 trials. This part of the study should take 7 minutes, more or less. </p>" +
   "<p align='left'> Click <strong>Continue</strong> to begin the actual task. </p>",
   on_load: textbox
 };
@@ -121,7 +121,7 @@ var  instruction_mem_MainTaskTransition = {
   choices: ['Continue'],
   stimulus:  "<p align='left'> Thank you for completing the practice stage. </p>"+
   "<p align='left'> Remember the goal here is to provide YOUR JUDGEMENT OF <span style='color: red;'> WHICH OF THE TWO PRESENTED FACES WAS </span> one of the faces in the sequence you just saw.</p>"+
-  "<p align='left'> In the following section you will complete the actual session, which consists of 15 trials. This part of the study should take 10 minutes, more or less. </p>" +
+  "<p align='left'> In the following section you will complete the actual session, which consists of 15 trials. This part of the study should take 8 minutes, more or less. </p>" +
   "<p align='left'> Click <strong>Continue</strong> to begin the actual task. </p>",
   on_load: textbox
 };
