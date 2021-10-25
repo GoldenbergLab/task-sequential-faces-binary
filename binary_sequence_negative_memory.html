@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>sequenccollective_emotion_estimation_task</title>
+    <title>a-s-g-m.hbssurvey</title>
     <script src="jspsych-6.0.5/jspsych.js"></script>
     <script src="jspsych-6.0.5/plugins/jspsych-image-button-response.js"></script>
     <script src="jspsych-6.0.5/plugins/jspsych-survey-text.js"></script>
@@ -26,8 +26,8 @@
   /* Set up jsPsych blocks - static */
   /* ************************************ */
 
-  var taskNumber_sequential = 50; //must be mutiples of 5. The real trial number will have one extra due to attention check trial
-  var taskNumber_memory = 50; //must be mutiples of 5. The real trial number will have one extra due to attention check trial
+  var taskNumber_sequential = 25; //must be mutiples of 5. The real trial number will have 3 extra due to practice trials
+  var taskNumber_memory = 25; //must be mutiples of 5. The real trial number will have 3 extra due to practice trials
   var attentionCheckInterval = 5; //there will be an attention check every this number of trials
   var practiceNumber = 3;
   var facesPool = loadFacePool(51,150); //preload faces
@@ -87,7 +87,7 @@
 
   var imageDescription = {
     type: 'survey-text',
-    questions: [{prompt: "Please describe the picture in your own words"}],
+    questions: [{prompt: "Please name the animal in the picture. This is important for you to receive credit."}],
     preamble: function() {
       var curr_stim = imageTestDescription.shift()
       return '<img src='+curr_stim+'></img>';
