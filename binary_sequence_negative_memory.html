@@ -165,9 +165,7 @@
 
   var askTypeWord = { //attention check - participants are asked to copy a word that appears on the screen
     type: 'survey-text',
-    questions: function (){return [{prompt:'Please type the word: '+ getWord().bold() + '  (pay attention to capital letters)'}]},
-    on_start: function(data){
-      saveDataToS3()}
+    questions: function (){return [{prompt:'Please type the word: '+ getWord().bold() + '  (pay attention to capital letters)'}]}
   };
 
   var attentionCheck = { //function for the attention check
