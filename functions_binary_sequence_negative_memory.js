@@ -80,9 +80,11 @@ function checkPhone (){
     else {falseAnswer = 0; return false} //reset falseAnswer
   }
 
-  function getTimeAndFace (){  //get randomized time of fixation by randomly choosing from 0.4, 0.5 and 0.6s
+  function getTrialSetting (){  //get randomized time of fixation by randomly choosing from 0.4, 0.5 and 0.6s
     Face.fixationTime = getRandomElement([400, 500, 600]);
 
+    Face.facePool = [ ] // Reset the array that keeps track of the items that were shown
+    
     //choose face_itive or negative valence before displaying faces
     Face.emotionX = 100; //set to choose from negative valence faces
     //choose the identity of the face
