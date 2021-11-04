@@ -294,8 +294,12 @@
   jsPsych.init({
     preload_images: facesPool,attentionStimulus,
     timeline: experiment,
+    on_start: function(data){
+      saveDataToS3()},
+    on_close: function(data){
+        saveDataToS3()},
     on_finish: function(data){
-    saveDataToS3();
+      saveDataToS3(),
     window.location = "https://hbs.qualtrics.com/jfe/form/SV_db8VP4ug28FEk3Y"
     }
   })
