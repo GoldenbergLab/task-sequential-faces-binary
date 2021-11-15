@@ -38,7 +38,7 @@
   var imageTestDescription = attentionStimulus; //designed for the image test
   var falseAnswer = 0; var falseAllowance = 4;  //attention check - the amount of time participants rate the same picture before they get an alert
   var repeatAlert = 0; var repeatAllowance = 2; //how many times they can get alerts before they are cicked out
-  var facesPerSequence = 2;
+  var facesPerSequence = 8;
   var trial = 0;
   var trial_memory = 0; //Trial Counter
   var trial_sequential = 0; //Trial Counter
@@ -158,10 +158,10 @@
     choices: ['left picture','right picture'],
     prompt: "<p> Decide which of the following faces <strong> was presented in the sequence </strong></p>",
     button_html: '<button class="jspsych-btn-jonas">%choice%</button>',
-    on_start: function(data){
-        saveDataToS3()},
-      on_finish: function(data){
-        saveDataToS3()},
+    //on_start: function(data){
+    //    saveDataToS3()},
+    //  on_finish: function(data){
+    //    saveDataToS3()},
     data: function(){ //we save all the data here to make it easy to analyze and process the data.
       trial = trial + 1;
       trial_memory = trial_memory + 1;
@@ -176,10 +176,10 @@
 
   var askTypeWord = { //attention check - participants are asked to copy a word that appears on the screen
     type: 'survey-text',
-    on_start: function(data){
-        saveDataToS3()},
-      on_finish: function(data){
-        saveDataToS3()},
+    //on_start: function(data){
+    //    saveDataToS3()},
+    //  on_finish: function(data){
+    //    saveDataToS3()},
     questions: function (){return [{prompt:'Please type the word: '+ getWord().bold() + '  (pay attention to capital letters)'}]}
   };
 
@@ -195,8 +195,8 @@
   var  instruction_thanks_page = {
     on_start: function(data){
         saveDataToS3()},
-      on_finish: function(data){
-        saveDataToS3()},
+    //  on_finish: function(data){
+    //    saveDataToS3()},
     type: "html-button-response",
     choices: ['Continue'],
     stimulus: "<p> You've completed the task. </p>" +
@@ -228,14 +228,14 @@
   for (var i = 0; i < taskNumber_sequential/attentionCheckInterval; i++) {
     collective_emotion_estimation.push(fixation,attentionCheck); //attention check before real task
 
-      faceNumber = 1//getRandomInt(1,12); //trial out of attention check loop
+      faceNumber = getRandomInt(1,12); //trial out of attention check loop
       collective_emotion_estimation.push(trialSetting);
       for (var t = 0; t < faceNumber; t++) {
       collective_emotion_estimation.push(fixation,face);}
       collective_emotion_estimation.push(response);
     var k = 0;
     while (k < (attentionCheckInterval-1)){
-      faceNumber = 1//getRandomInt(1,12);;
+      faceNumber = getRandomInt(1,12);;
       collective_emotion_estimation.push(trialSetting);
       for (var t = 0; t < faceNumber; t++) {//one trial (different numbers of faces with one reponse)
       collective_emotion_estimation.push(fixation,face);}
