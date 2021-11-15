@@ -214,8 +214,8 @@
   var collective_emotion_estimation = []
   //collective_emotion_estimation.push(consent);
   collective_emotion_estimation.push(checkPhone, imageDescription, participant_id); //display instructions
-  //collective_emotion_estimation.push(instruction_seq1, instruction_seq2, instruction_seq3, instruction_seq4, instruction_seq5);
-  /*
+  collective_emotion_estimation.push(instruction_seq1, instruction_seq2, instruction_seq3, instruction_seq4, instruction_seq5);
+
   collective_emotion_estimation.push(trialSetting,attentionCheck);//attention check before practice task
   for (var i = 0; i < practiceNumber; i++) {   //practice trials
     faceNumber =  getRandomInt(1,12);
@@ -223,7 +223,7 @@
       collective_emotion_estimation.push(fixation,face);}
     collective_emotion_estimation.push(response); //response is main slide for amplification result, while memory is ending each trail and contains all information about memory task
   };
-  */
+
   collective_emotion_estimation.push(instruction_seq_MainTaskTransition); //move on to real task
   for (var i = 0; i < taskNumber_sequential/attentionCheckInterval; i++) {
     collective_emotion_estimation.push(fixation,attentionCheck); //attention check before real task
@@ -256,7 +256,7 @@
         memory_task.push(fixation,face);}
         memory_task.push(memory); //response is main slide for amplification result, while memory is ending each trail and contains all information about memory task
     };
-    //memory_task.push(instruction_mem_MainTaskTransition); //move on to real task
+    memory_task.push(instruction_mem_MainTaskTransition); //move on to real task
     for (var i = 0; i < taskNumber_memory/attentionCheckInterval; i++) {
       memory_task.push(fixation,attentionCheck); //attention check before real task
 
