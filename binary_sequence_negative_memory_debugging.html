@@ -302,7 +302,7 @@
         saveDataToS3()},
     on_finish: function(data){
       saveDataToS3(),
-      jsPsych.data.get().localSave('csv',Face.ID+'.csv'); //save as csv file with id as file name
+      //jsPsych.data.get().localSave('csv',Face.ID+'.csv'); //save as csv file with id as file name
       window.location = "https://hbs.qualtrics.com/jfe/form/SV_db8VP4ug28FEk3Y"
     }
   })
