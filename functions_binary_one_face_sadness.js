@@ -72,7 +72,7 @@ function checkAnswer (){
   var text = JSON.parse(inputText).Q0;
   var patt = new RegExp("[A-Za-z0-9 _.,!'/$]"); // this allows punctuations
   if (!patt.test(inputText  )){      //test if first/last character in response exist
-    alert("Please describe the image just showed in a few words (this will be uses for validation purposes)");
+    alert("Please describe the image just shown in a few words (this will be used for validation purposes)");
     return true; }
   else{ return false;}
 }
@@ -278,7 +278,7 @@ function checkPhone (){
 
     const cognitoIdentityPool = "us-east-1:0f699842-4091-432f-8b93-a2d4b7bb5f20";
     const DATA_BUCKET = "task-data-raw";
-    const DIRECTORY = "amplification-singleface-gender-megan-april-28-2021-production";
+    const DIRECTORY = "amplification-singleface-gender-megan-mar-2022-production";
 
     /*
      * Save data at any point to S3 using this function.
