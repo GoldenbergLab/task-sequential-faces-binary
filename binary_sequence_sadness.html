@@ -83,7 +83,7 @@
 
   var imageDescription = {
     type: 'survey-text',
-    questions: [{prompt: "Please describe the picture in your own words"}],
+    questions: [{prompt: "Please name the animal (to the best of your knowledge)"}],
     preamble: function() {
       var curr_stim = imageTestDescription.shift()
       return '<img src='+curr_stim+'></img>';
@@ -205,7 +205,7 @@
     timeline: collective_emotion_estimation,
     on_finish: function(data){
     saveDataToS3();
-    window.location = "https://hbs.qualtrics.com/jfe/form/SV_6LhS8VFy58iPgl8"
+    window.location = "https://hbs.qualtrics.com/jfe/form/SV_e4ZYT52BohYpDKu"
     }
   })
 
