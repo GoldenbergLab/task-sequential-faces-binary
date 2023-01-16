@@ -278,7 +278,7 @@ function checkPhone (){
 
     const cognitoIdentityPool = "us-east-1:0f699842-4091-432f-8b93-a2d4b7bb5f20";
     const DATA_BUCKET = "task-data-raw";
-    const DIRECTORY = "amplification-sequential-gender-megan-apr-2022-production";
+    const DIRECTORY = "amplification-sequential-gender-megan-jan-23";
 
     /*
      * Save data at any point to S3 using this function.
