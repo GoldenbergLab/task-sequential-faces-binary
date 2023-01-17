@@ -18,8 +18,8 @@ function loadFacePool(start,end) { //the start and ending index of the images
      pool.push( 'img/C' + i + '.jpg');
      pool.push( 'img/D' + i + '.jpg');
      pool.push( 'img/E' + i + '.jpg');
-     //pool.push( 'img/F' + i + '.jpg');
-     pool.push( 'img/G' + i + '.jpg');
+     pool.push( 'img/F' + i + '.jpg');
+     //pool.push( 'img/G' + i + '.jpg');
      pool.push( 'img/H' + i + '.jpg');
    }
   return pool;
