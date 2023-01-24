@@ -120,7 +120,7 @@ function checkPhone (){
     //choose face_itive or negative valence before displaying faces
     Face.emotionX = 0; //set to choose from negative valence faces
     //choose the identity of the face
-    Face.personX = getRandomElement(['A','B','C','E','F','H']); //randomally choose from ['A','B','C','D'] -- select person
+    Face.personX = getRandomElement(['A','C','D','E','F','H']); //randomally choose from ['A','B','C','D'] -- select person
 
     return Face.fixationTime;
   }
